@@ -1,0 +1,9 @@
+def add(x, y):
+    while y != 0:
+        carry = x & y
+        x = x ^ y
+        y = carry << 1
+    return x
+
+if __name__ == "__main__":
+    print(add(5, 17))  # 22
